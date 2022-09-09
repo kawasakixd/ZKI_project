@@ -1,0 +1,26 @@
+.head {
+    height: 100px;
+    background-color: rgb(30, 71, 126);
+    position: relative;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+}
+
+.wrapper a{
+    color:white;
+    width: fit-content;
+    width: 75px;
+    text-align: center;
+    text-decoration: none;
+}
