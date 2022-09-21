@@ -6,9 +6,9 @@ function Header() {
     return (
         <div className={s.head}>
             <div className={s.wrapper}>
-                <NavLink to="/">ZKI</NavLink>
-                <NavLink to="/">Teoriya</NavLink>
-                <NavLink to="/">Practica</NavLink>
+                <NavLink to="/main">ZKI</NavLink>
+                <NavLink to="/teoriya">Teoriya</NavLink>
+                <NavLink to="/practica">Practica</NavLink>
             </div>
         </div>
     );

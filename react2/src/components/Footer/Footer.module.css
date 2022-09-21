@@ -1,0 +1,6 @@
+.foot {
+    background: linear-gradient(70deg, rgb(56, 56, 255),rgb(182, 73, 91));
+    height: 100px;
+    text-align: center;
+    position: relative;
+}

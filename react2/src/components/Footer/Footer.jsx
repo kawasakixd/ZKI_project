@@ -1,9 +1,8 @@
-import './Footer.module.css';
+import s from './Footer.module.css';
 
 function Footer() {
   return (
-    <div>
-      Привет 
+    <div className={s.foot}>
     </div>
   );
 }
