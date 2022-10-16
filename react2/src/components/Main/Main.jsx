@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes } from 'react-router-dom';
+import React from 'react';
 import s from './Main.module.css';
 
 
