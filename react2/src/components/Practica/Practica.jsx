@@ -4,6 +4,7 @@ import React from 'react';
 import s from './Practica.module.css';
 import LR1 from './LR\'s/LR1/LR1';
 import LR2 from './LR\'s/LR2/LR2';
+import {motion} from 'framer-motion/dist/framer-motion'
 
 function Practica() {
 
@@ -24,7 +25,11 @@ function Practica() {
     const [tabPane] = React.useState(true);
 
     return (
-        <div className={s.head}>
+        <motion.div className={s.head}
+            intial={{width:0}}
+            animate={{width:"100%"}}
+            exit={{x: window.innerWidth, transition: {duration:0.5}}}
+            >
             <Tabs
                 tabPosition='top'
                 tabBarGutter={70}
@@ -37,7 +42,7 @@ function Practica() {
                 items={items}>
                 
             </Tabs>
-        </div>
+        </motion.div>
     );
 }
 

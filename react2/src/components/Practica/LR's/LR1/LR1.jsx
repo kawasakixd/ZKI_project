@@ -1,13 +1,9 @@
 import React from 'react';
 import { Checkbox } from 'antd';
 import s from './LR1.module.css';
+import {eventForGenerationBtn} from './script/scriptLR1_2'
 
 function LR1() {
-
-    const onChange = (e) => {
-        console.log(`checked = ${e.target.checked}`);
-    };
-
 
     return (
         <div className={s.wrapper}>
@@ -31,10 +27,19 @@ function LR1() {
                 </div>
                 <div className={s.pole2}>
                     <div className={s.checkBox}>
-                        <Checkbox onChange={onChange}>First</Checkbox>
+                        Входящие для пароля:
+                        <Checkbox id="Ru">RU</Checkbox>
+                        <Checkbox id="ru">ru</Checkbox>
+                        <Checkbox id="En">EN</Checkbox>
+                        <Checkbox id="en">en</Checkbox>
+                        <Checkbox id="num">Num</Checkbox>
                     </div>
-                    <button>Сгенерировать</button>
-                    <textarea placeholder='Пароль' rows={1}></textarea>
+                    <div className={s.middle}>
+                        <input type="number" max={20} min={1} id='number' />
+                        <button onClick={eventForGenerationBtn}>Сгенерировать</button>
+                    </div>
+
+                    <textarea placeholder='Пароль' rows={1} id='Pass2'></textarea>
                 </div>
             </div>
             <div className={s.second}>

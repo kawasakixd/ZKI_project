@@ -5,7 +5,6 @@ let arr_EN = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', '
 let arr_ru = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ь', 'ы', 'ъ', 'э', 'ю', 'я'];
 let arr_RU = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ь', 'Ы', 'Ъ', 'Э', 'Ю', 'Я'];
 let lengthOfPass = 0;
-let variant = 0;
 let p, v, t;
 let arrPass = [];
 let arrPass2 = [];
@@ -17,79 +16,6 @@ let sortArr = (nameArr) => {
 let createArr = (newArr) => {
     newArr = newArr.flat();
     return newArr
-}
-
-const varBtn = document.querySelector('.var__btn');
-varBtn.addEventListener('click', () => {
-    let inputValue = document.querySelector('.variant__input');
-    variant = +inputValue.value;
-    showS();
-})
-
-let showS = () => {
-    if (variant === 2 || variant === 8 || variant === 11) {
-
-        document.querySelector('.task1__wrapper').innerHTML = '';
-
-        switch (variant) {
-            case 2:
-                p = Math.pow(10, -5), v = 3, t = 14400;
-                break;
-            case 8:
-                p = Math.pow(10, -7), v = 15, t = 28800;
-                break;
-            case 11:
-                p = Math.pow(10, -6), v = 11, t = 20160;
-                break;
-        }
-
-        let s = (v, t, p) => {
-            return (v * t) / p
-        }
-
-        let task1 = document.querySelector('.tasks')
-        task1.innerHTML = `<p class = "s">S = ${s(v, t, p)}</p>`
-        createArgForPass();
-
-        document.querySelector('.task2__wrapper').innerHTML = '';
-        writeN();
-    } else {
-        document.querySelector('.task2__wrapper').innerHTML = '';
-        document.querySelector('.tasks').innerHTML = '';
-        document.querySelector('.task1__wrapper').innerHTML = `<h3 class = "notThisVariant">Такого варианта нет</h3>`
-    }
-
-}
-
-let createArgForPass = () => {
-    let lengthOfArrBlock = document.createElement('div')
-    lengthOfArrBlock.classList.add('length__wrapper');
-    lengthOfArrBlock.innerHTML = `
-        <p>Желаемая длинна пароля:</p>
-        <input type="text" class='length__input' maxlength="2">`
-    task1 = document.querySelector(".task1__wrapper")
-    task1.appendChild(lengthOfArrBlock);
-
-    let chekers = document.createElement('div')
-    chekers.classList.add('chekers__wrapper');
-    chekers.innerHTML = `
-        <div class = 'inputs__collection'>
-            <label><input type="checkbox" id="num">Num</label>
-            <label><input type="checkbox" id="ru">ru</label>
-            <label><input type="checkbox" id="Ru">Ru</label>
-            <label><input type="checkbox" id="en">en</label>
-            <label><input type="checkbox" id="En">En</label>
-        </div>
-        <button class='generation__btn'>Сгенерировать пароль</button>`
-    task1.appendChild(chekers);
-
-    let inputPassword = document.createElement('div');
-    inputPassword.classList.add('inputPasswordWrapper');
-    inputPassword.innerHTML = `
-         <input type="text" readonly class='inputPass'>`
-    task1.appendChild(inputPassword)
-
-    eventForGenerationBtn();
 }
 
 let eventForGenerationBtn = () => {
@@ -123,7 +49,7 @@ let eventForGenerationBtn = () => {
         if (document.getElementById('En').checked) {
             mapArr.push(arr_EN)
         }
-        createArrPass(lengthOfPass, mapArr);
+        createArrPass(20, mapArr);
     })
 }
 
@@ -181,8 +107,7 @@ let eventForUserId = () => {
 }
 
 let generationArrPass2 = (variant, arr, lengthN) => {
-
-
+    
     arr = [];
 
     arr_spesh = sortArr(arr_spesh)

@@ -19,3 +19,7 @@ div {
 html, body{
   height: 100%;
 }
+
+label.ant-checkbox-wrapper{
+  margin-left: 8px;
+}
