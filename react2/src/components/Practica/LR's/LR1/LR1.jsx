@@ -1,7 +1,9 @@
 import React from 'react';
 import { Checkbox } from 'antd';
 import s from './LR1.module.css';
+import {Strenth} from './script/scriptLR1_1'
 import {eventForGenerationBtn} from './script/scriptLR1_2'
+import {generationArrPass2} from './script/scriptLR1_3'
 
 function LR1() {
 
@@ -16,11 +18,17 @@ function LR1() {
                 </div>
                 <div className={s.pole1}>
                     <div>
-                        <textarea placeholder='Введите S' rows={1}></textarea><br />
-                        <textarea placeholder='Введите Р' rows={1}></textarea>
+                        <textarea placeholder='Введите V' rows={1} id='V'></textarea><br />
+                        <textarea placeholder='Введите Р' rows={1} id='P'></textarea>
                     </div>
-                    <button>Сгенерировать</button>
-                    <textarea placeholder='S =' rows={1}></textarea>
+                    <div className={s.middle}>
+                    <select id='select'>
+                        <option value='6'>Вариант 6</option>
+                        <option value='7'>Вариант 7</option>
+                    </select>
+                    <button onClick={Strenth}>Сгенерировать</button>
+                    </div>
+                    <textarea placeholder='S =' rows={1} id="S"></textarea>
                 </div>
                 <div className={s.firstText1}>
                     Задание 2
@@ -47,9 +55,9 @@ function LR1() {
                     <b>Вторая часть</b>
                 </div>
                 <div className={s.pole3}>
-                    <textarea placeholder='Введите id' rows={1}></textarea>
-                    <button>Сгенерировать</button>
-                    <textarea placeholder='Код' rows={1}></textarea>
+                    <textarea placeholder='Введите id' rows={1} id="Input_id"></textarea>
+                    <button onClick={generationArrPass2}>Сгенерировать</button>
+                    <textarea placeholder='Код' rows={1} id="cod"></textarea>
                 </div>
             </div>
         </div>
