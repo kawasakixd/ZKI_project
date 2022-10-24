@@ -7,19 +7,13 @@ const arr6_3 = [8, 10, 24, 4, 32, 33, 29, 20, 28, 21, 1, 12, 36, 5, 22, 14, 3, 3
 
 let defaltStr = '';
 const result = document.querySelector('.result');
-const result2 = document.querySelector('.result2');
 
-const f2 = () => {
-
-    let genBTn = document.querySelector('#gen');
-    genBTn.addEventListener('click', (e) => {
-        let method = document.querySelector('.selectinChoose').value;
-        let inputValue = document.querySelector('.basicInput').value;
-        chooseMethod(method, inputValue)
-    })
-
-    let chooseMethod = (method, inputValue) => {
+export const f2 = () => {
+    chooseMethod();
+    let chooseMethod = () => {
         let arr = [];
+        let method = document.querySelector('.selectinChoose').value;
+        let inputValue = document.getElementById('basicValueForSecond').value
 
         if (inputValue.length > 36) {
             alert("Введенная строка больше 36 символов!!! Введите строку длинна которой меньше или равна 36 символам")
@@ -32,8 +26,8 @@ const f2 = () => {
                 arr.push(arrNum);
                 arr = arr.flat()
 
-                for (i = 0; i < arr.length; i++) {
-                    for (j = 0; j < arr.length; j++) {
+                for (let i = 0; i < arr.length; i++) {
+                    for (let j = 0; j < arr.length; j++) {
                         if (i + 1 == arr[j]) {
                             arr[j] = inputValue[i]
                         }
@@ -41,7 +35,6 @@ const f2 = () => {
                 }
 
                 result.value = arr.join('')
-                result2.value = arr.join('')
             }
 
             switch (true) {
@@ -73,59 +66,6 @@ const f2 = () => {
                     break;
             }
         }
-
-        const deshifr2 = () => {
-            const decodingInput2 = document.getElementById('decod2');
-
-            const elem2 = () => {
-                const finishedValue = [];
-                newArrDeckoder.push(arrNum);
-                newArrDeckoder = newArrDeckoder.flat()
-
-                for (i = 0; i > newArrDeckoder.length; i--) {
-                    for (j = 0; j > newArrDeckoder.length; j--) {
-                        if (i + 1 !== newArrDeckoder[j]) {
-                            newArrDeckoder[j] = inputValue[i];
-                        }
-                    }
-                    finishedValue.push(newArrDeckoder).join('');
-                }
-            }
-
-            const deshifrLog = () => {
-                switch (true) {
-                    case method == 1 && inputValue.length <= 25:
-                        elem2(arr5_1)
-                        break;
-
-                    case method == 2 && inputValue.length <= 25:
-                        elem2(arr5_2)
-                        break;
-
-                    case method == 3 && inputValue.length <= 25:
-                        elem2(arr5_3)
-                        break;
-
-                    case method == 4:
-                        elem2(arr6_1)
-                        break;
-
-                    case method == 5:
-                        elem2(arr6_2)
-                        break;
-                    case method == 6:
-                        elem2(arr6_3)
-                        break;
-                }
-            }
-
-            decodingInput2.addEventListener('click', () => {
-                const finished = document.querySelector('.finished')
-                finished.value = defaltStr;
-            })
-        }
-        deshifr2()
     }
-
 }
 f2();
