@@ -10,10 +10,11 @@ const result = document.querySelector('.result');
 
 export const f2 = () => {
     chooseMethod();
-    let chooseMethod = () => {
+    function chooseMethod(){
         let arr = [];
-        let method = document.querySelector('.selectinChoose').value;
+        let method = document.getElementById('selectinChoose').value;
         let inputValue = document.getElementById('basicValueForSecond').value
+        let result = document.getElementById('zashifrovanForSecond')
 
         if (inputValue.length > 36) {
             alert("Введенная строка больше 36 символов!!! Введите строку длинна которой меньше или равна 36 символам")
@@ -68,4 +69,3 @@ export const f2 = () => {
         }
     }
 }
-f2();

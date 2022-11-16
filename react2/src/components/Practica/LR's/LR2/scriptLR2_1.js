@@ -7,7 +7,11 @@ export const f1 = () => {
 
     function getSize() {
         let size = document.getElementById('basicValue').value.length
-        let i = 0;
+        if(size === 0){
+            alert('ты даун')
+        }
+        else{
+            let i = 0;
         for (i; i < 100; i++) {
             if (size <= i * i) {
                 break;
@@ -15,6 +19,7 @@ export const f1 = () => {
         }
         shifruemoe = document.getElementById('basicValue').value
         zashifrovanoe(shifruemoe, i);
+        }
     }
 
     function zashifrovanoe(shifruemoe, n){

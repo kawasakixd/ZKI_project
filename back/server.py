@@ -12,6 +12,7 @@ app = Flask(__name__)
 @app.route('/data')
 def get_time():
 
+
 	# Returning an api for showing in reactjs
 	return {
 		'Name':"geek",
@@ -19,6 +20,7 @@ def get_time():
 		"Date":x,
 		"programming":"python"
 		}
+
 
 	
 # Running app

@@ -1,10 +1,14 @@
 import React from 'react';
-import s from './LR2.module.css';
-import { f1 } from './scriptLR2_1';
-import { f2 } from './scriptLR2_2'
+import s from './LR3.module.css';
+import axios from "axios"
  
 function LR2() {
 
+    let Request = () =>{
+        axios.get('http://127.0.0.1:5000/').then(request =>{
+        console.log(document.getElementsByClassName("hui").value)
+    })
+    }
     return (
         <div className={s.wrapper}>
             <div className={s.first}>
@@ -14,7 +18,7 @@ function LR2() {
                 <div className={s.pole1}>
                     <textarea type="text" placeholder='Text for shifr' id='basicValue' rows={1}></textarea>
                     <div className={s.middle}>
-                    <button onClick={f1}>Зашифровать</button>
+                    <button onClick={Request}>Зашифровать</button>
                     </div>
                     <textarea placeholder='Shifr text' readOnly id='zashifrovan' rows={1}></textarea>
                 </div>
@@ -35,11 +39,12 @@ function LR2() {
                             <option value="5">6х6 2</option>
                             <option value="6">6х6 3</option>
                         </select>
-                        <button onClick={f2}>Зашифровать</button>
+                        <button >Зашифровать</button>
                     </div>
                     <textarea placeholder='Shifr text' readOnly id='zashifrovanForSecond' rows={1}></textarea>
                 </div>
             </div>
+            <input type="text" value="text" className="hui" />
         </div>
     );
 }
