@@ -1,14 +1,10 @@
 import React from 'react';
 import s from './LR3.module.css';
-import axios from "axios"
- 
-function LR2() {
+import { FirstRequestEx1 } from "./scriptLR3"
+import { FirstRequestEx2 } from "./scriptLR3"
+import { FirstRequestEx3 } from "./scriptLR3"
 
-    let Request = () =>{
-        axios.get('http://127.0.0.1:5000/').then(request =>{
-        console.log(document.getElementsByClassName("hui").value)
-    })
-    }
+function LR2() {
     return (
         <div className={s.wrapper}>
             <div className={s.first}>
@@ -16,11 +12,12 @@ function LR2() {
                     <b>Задание 1</b>
                 </div>
                 <div className={s.pole1}>
-                    <textarea type="text" placeholder='Text for shifr' id='basicValue' rows={1}></textarea>
+                    <textarea type="text" placeholder='Text for shifr' id='basicValue' name="message" rows={1}></textarea>
                     <div className={s.middle}>
-                    <button onClick={Request}>Зашифровать</button>
+                        <input type="number" max={18} min={1} id='number' name='countK' />
+                        <button onClick={FirstRequestEx1}>Сгенерировать</button>
                     </div>
-                    <textarea placeholder='Shifr text' readOnly id='zashifrovan' rows={1}></textarea>
+                    <textarea placeholder='Shifr text' readOnly id='answerforfirst' rows={1}></textarea>
                 </div>
             </div>
             <br />
@@ -29,22 +26,34 @@ function LR2() {
                     <b>Задание 2</b>
                 </div>
                 <div className={s.pole1}>
-                    <textarea type="text" placeholder='Text for shifr' id='basicValueForSecond' rows={1}></textarea>
-                    <div className={s.middle}>
-                        <select id="selectinChoose">
-                            <option value="1">5х5 1</option>
-                            <option value="2">5х5 2</option>
-                            <option value="3">5х5 3</option>
-                            <option value="4">6х6 1</option>
-                            <option value="5">6х6 2</option>
-                            <option value="6">6х6 3</option>
-                        </select>
-                        <button >Зашифровать</button>
+                    <div>
+                        <textarea type="text" placeholder='Text for shifr' id='basicValueForSecond' name="message" rows={1}></textarea><br />
+                        <textarea type="text" placeholder='A' id='A' name="a" rows={1}></textarea><br />
+                        <textarea type="text" placeholder='B' id='B' name="b" rows={1}></textarea><br />
+                        <textarea type="text" placeholder='C' id='C' name="c" rows={1}></textarea><br />
                     </div>
-                    <textarea placeholder='Shifr text' readOnly id='zashifrovanForSecond' rows={1}></textarea>
+                    <div className={s.middle}>
+                        <button  onClick={FirstRequestEx2}>Зашифровать</button>
+                    </div>
+                    <textarea placeholder='Shifr text' readOnly id='answerforsecond' rows={1}></textarea>
                 </div>
             </div>
-            <input type="text" value="text" className="hui" />
+            <div className={s.first}>
+                <div className={s.firstText}>
+                    <b>Задание 3</b>
+                </div>
+                <div className={s.pole1}>
+                    <textarea type="text" placeholder='Text for shifr' id='basicValueForThird' rows={1}></textarea>
+                    <div className={s.middle}>
+                        <select id="selectinChooseForThird">
+                            <option value="True">Вариант 6</option>
+                            <option value="False">Вариант 7</option>
+                        </select>
+                        <button onClick={FirstRequestEx3}>Зашифровать</button>
+                    </div>
+                    <textarea placeholder='Shifr text' readOnly id='AnswerForThird' rows={1}></textarea>
+                </div>
+            </div>
         </div>
     );
 }
