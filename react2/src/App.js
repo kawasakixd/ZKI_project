@@ -1,4 +1,5 @@
 import React from "react";
+import "antd/dist/antd.min.css"
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -7,6 +8,7 @@ import AnimatedComponents from "./components/AnimatedComponents/AnimatedComponen
 function App() {
   return (
     <div className="app">
+
       <Header />
       <AnimatedComponents />
       <Footer />

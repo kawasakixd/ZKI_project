@@ -1,0 +1,77 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstText {
+    text-align: center;
+    font-size: 25px;
+    height: max-content;
+}
+
+.pole1 {
+    padding: 10px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 5px 0 0;
+}
+
+textarea {
+    resize: none;
+    width: 306.5px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+button {
+    background-color: rgb(224, 224, 224);
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: max-content;
+    width: 150px;
+    transition: 1s;
+    font-size: large;
+    box-shadow: 0 0 4px 2px black;
+}
+
+button:hover {
+    transform: scale(1.2);
+    background-color: white;
+    color: rgb(7, 255, 102);
+    box-shadow: 0 0 5px 2px rgb(82, 82, 255);
+}
+
+.middle button{
+    margin-top: 10px;
+}
+
+.middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkBox {
+    padding: 10px;
+    border: 1px solid black;
+    width: max-content;
+    display: flex; 
+}
+
+.selector{
+
+}
+
+.UnderArea{
+    width: 306.5px;
+}
