@@ -4,7 +4,7 @@ import axios from "axios"
 import { FirstRequestEx1 } from "./scriptLR4"
 import { Ex2 } from "./scriptLR4"
 
-function LR2() {
+function LR4() {
 
     const [data, setData] = useState({})
     const [value, setValue] = useState({})
@@ -83,4 +83,4 @@ function LR2() {
     );
 }
 
-export default LR2;
+export default LR4;

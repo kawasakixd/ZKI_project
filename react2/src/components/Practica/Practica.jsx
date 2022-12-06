@@ -1,11 +1,13 @@
 import { Tabs } from 'antd';
 import React from 'react';
 import s from './Practica.module.css';
+import {motion} from 'framer-motion/dist/framer-motion'
 import LR1 from './LR\'s/LR1/LR1';
 import LR2 from './LR\'s/LR2/LR2';
 import LR3 from './LR\'s/LR3/LR3';
 import LR4 from './LR\'s/LR4/LR4';
-import {motion} from 'framer-motion/dist/framer-motion'
+import LR5 from './LR\'s/LR5/LR5';
+import LR6 from './LR\'s/LR6/LR6';
 
 function Practica() {
 
@@ -14,8 +16,8 @@ function Practica() {
         { label: 'LR2', key: 'item-2', children: <LR2 /> },
         { label: 'LR3', key: 'item-3', children: <LR3 /> },
         { label: 'LR4', key: 'item-4', children: <LR4 /> },
-        { label: 'LR5', key: 'item-5', children: <div>LR5</div> },
-        { label: 'LR6', key: 'item-6', children: <div>LR6</div> },
+        { label: 'LR5', key: 'item-5', children: <LR5 /> },
+        { label: 'LR6', key: 'item-6', children: <LR6 /> },
         { label: 'LR7', key: 'item-7', children: <div>LR7</div> },
         { label: 'LR8', key: 'item-8', children: <div>LR8</div> },
         { label: 'LR9', key: 'item-9', children: <div>LR9</div> },

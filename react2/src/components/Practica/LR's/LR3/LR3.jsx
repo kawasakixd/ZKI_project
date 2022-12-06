@@ -4,7 +4,7 @@ import { FirstRequestEx1 } from "./scriptLR3"
 import { FirstRequestEx2 } from "./scriptLR3"
 import { FirstRequestEx3 } from "./scriptLR3"
 
-function LR2() {
+function LR3() {
     return (
         <div className={s.wrapper}>
             <div className={s.first}>
@@ -58,4 +58,4 @@ function LR2() {
     );
 }
 
-export default LR2;
+export default LR3;
