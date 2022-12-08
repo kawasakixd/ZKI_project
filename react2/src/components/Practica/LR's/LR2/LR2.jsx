@@ -16,7 +16,7 @@ function LR2() {
                     <div className={s.middle}>
                     <button onClick={f1}>Зашифровать</button>
                     </div>
-                    <textarea placeholder='Shifr text' readOnly id='zashifrovan' rows={1}></textarea>
+                    <textarea placeholder='Encrypt text' readOnly id='zashifrovan' rows={1}></textarea>
                 </div>
             </div>
             <br />
@@ -25,7 +25,7 @@ function LR2() {
                     <b>Задание 2</b>
                 </div>
                 <div className={s.pole1}>
-                    <textarea type="text" placeholder='Text for shifr' id='basicValueForSecond' rows={1}></textarea>
+                    <textarea type="text" placeholder='Text for Encrypt' id='basicValueForSecond' rows={1}></textarea>
                     <div className={s.middle}>
                         <select id="selectinChoose">
                             <option value="1">5х5 1</option>
@@ -37,7 +37,7 @@ function LR2() {
                         </select>
                         <button onClick={f2}>Зашифровать</button>
                     </div>
-                    <textarea placeholder='Shifr text' readOnly id='zashifrovanForSecond' rows={1}></textarea>
+                    <textarea placeholder='Encrypt text' readOnly id='zashifrovanForSecond' rows={1}></textarea>
                 </div>
             </div>
         </div>

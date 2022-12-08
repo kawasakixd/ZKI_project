@@ -8,6 +8,10 @@ import LR3 from './LR\'s/LR3/LR3';
 import LR4 from './LR\'s/LR4/LR4';
 import LR5 from './LR\'s/LR5/LR5';
 import LR6 from './LR\'s/LR6/LR6';
+import LR7 from './LR\'s/LR7/LR7';
+import LR8 from './LR\'s/LR8/LR8';
+import LR9 from './LR\'s/LR9/LR9';
+
 
 function Practica() {
 
@@ -18,9 +22,9 @@ function Practica() {
         { label: 'LR4', key: 'item-4', children: <LR4 /> },
         { label: 'LR5', key: 'item-5', children: <LR5 /> },
         { label: 'LR6', key: 'item-6', children: <LR6 /> },
-        { label: 'LR7', key: 'item-7', children: <div>LR7</div> },
-        { label: 'LR8', key: 'item-8', children: <div>LR8</div> },
-        { label: 'LR9', key: 'item-9', children: <div>LR9</div> },
+        { label: 'LR7', key: 'item-7', children: <LR7 /> },
+        { label: 'LR8', key: 'item-8', children: <LR8 /> },
+        { label: 'LR9', key: 'item-9', children: <LR9 /> },
         { label: 'LR10', key: 'item-10', children: <div>LR10</div> },
         { label: 'LR11', key: 'item-11', children: <div>LR11</div> }
     ]

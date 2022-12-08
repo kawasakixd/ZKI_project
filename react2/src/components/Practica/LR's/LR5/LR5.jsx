@@ -16,7 +16,7 @@ function LR5() {
                 <div className={s.pole1}>
                     <textarea placeholder='Введите message' rows={1} id="message_ex5_1"></textarea>
                     <button onClick={LR5_EX1}>Сгенерировать</button>
-                    <textarea placeholder='Shifr message' rows={1} id="shifr_message_ex5_1"></textarea>
+                    <textarea placeholder='Encrypt message' rows={1} id="shifr_message_ex5_1"></textarea>
                 </div>
             </div>
             <div className={s.second}>
@@ -29,7 +29,7 @@ function LR5() {
                 <div className={s.pole1}>
                     <textarea placeholder='Введите message' rows={1} id="message_ex5_2_1"></textarea>
                     <button onClick={LR5_EX2_1}>Сгенерировать</button>
-                    <textarea placeholder='Shifr message' rows={1} id="shifr_message_ex5_2_1"></textarea>
+                    <textarea placeholder='Encrypt message' rows={1} id="shifr_message_ex5_2_1"></textarea>
                 </div>
                 <div className={s.firstText1}>
                     Задание 2
@@ -37,7 +37,7 @@ function LR5() {
                 <div className={s.pole1}>
                     <textarea placeholder='Введите message' rows={1} id="message_ex5_2_2"></textarea>
                     <button onClick={LR5_EX2_2}>Сгенерировать</button>
-                    <textarea placeholder='Shifr message' rows={1} id="shifr_message_ex5_2_2"></textarea>
+                    <textarea placeholder='Encrypt message' rows={1} id="shifr_message_ex5_2_2"></textarea>
                 </div>
             </div>
         </div>

@@ -12,8 +12,12 @@ def lr_7_1(a, b, n):
                 sum -= n
         tmp = sum
 
-    return tmp
+    return {
+        "answer": tmp
+    }
 
 
 def lr_7_2(message):
-    return hashlib.md5(message.encode('utf-8')).hexdigest()
+    return {
+        "answer": hashlib.md5(message.encode('utf-8')).hexdigest()
+    }

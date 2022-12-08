@@ -47,20 +47,24 @@ def home():
                 return lr_5_2_3(str(data.get('message')))
 
         elif data.get("LR") == 7:
-            if req["nameFunction"] == "lr_7_1":
+            if req["nameFunction"] == "LR7_EX1":
                 return lr_7_1(int(data.get('a')), int(data.get('b')), int(data.get('c')))
 
-            elif req["nameFunction"] == "lr_7_2":
+            elif req["nameFunction"] == "LR7_EX2":
                 return lr_7_2(str(data.get('message')))
 
+        elif data.get("LR") == 8:
+            if req["nameFunction"] == "LR8_EX":
+                return lr_9_1()
+
         elif data.get("LR") == 9:
-            if req["nameFunction"] == "lr_9_1":
+            if req["nameFunction"] == "LR9_EX1":
                 return lr_9_1(int(data.get('var')))
 
-            elif req["nameFunction"] == "lr_9_2":
+            elif req["nameFunction"] == "LR9_EX2":
                 return lr_9_2(int(data.get('var')))
 
-            elif req["nameFunction"] == "lr_9_3":
+            elif req["nameFunction"] == "LR9_EX3":
                 return lr_9_3(int(data.get('var')))
 
         elif data.get("LR") == 10:

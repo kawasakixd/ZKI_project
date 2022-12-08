@@ -13,13 +13,15 @@ def lr_9_1(var):
         n = 128
         k = 10
         s = 500
-        m = 0
+        m = 1
         v = 0
 
     c = pow(n, k) / s
     res = c + c * v / m
-
-    return int(res)
+    res = int(res)
+    return {
+        "answer" : res
+    }
 
 
 def lr_9_2(var):
@@ -28,14 +30,18 @@ def lr_9_2(var):
         t = 90 * 365 * 24 * 3600
         s = 50
         res = ceil(log(t * s, 52))
+        return {
+            "answer" : res
+        }
 
     elif var == 7:
         n = 128
         t = 100 * 365 * 24 * 3600
         s = 500
         res = ceil(log(t * s, 52))
-
-    return res
+        return {
+            "answer" : res
+        }
 
 
 def lr_9_3(var):
@@ -51,4 +57,6 @@ def lr_9_3(var):
         s = 500
         res = ceil(pow(t * s, 1 / k))
 
-    return res
+    return {
+        "answer" : res
+    }

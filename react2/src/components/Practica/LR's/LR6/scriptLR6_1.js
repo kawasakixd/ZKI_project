@@ -1,7 +1,5 @@
 /* global BigInt */
-
 export const EX6_1_shif = () => {
-    
     let p = document.getElementById("field_ex6_1_p").value
     let q = document.getElementById("field_ex6_1_q").value
     let e = document.getElementById("field_ex6_1_e").value
@@ -56,7 +54,7 @@ export const EX6_1_raz = () => {
         console.log("e =", e)
 
         let sob2 = powMod(sob1, d, n)
-        document.getElementById("zor").value = sob2
+        document.getElementById("shifr_message_ex6_1").value = sob2
         console.log("шифр ", Number(sob2))
         sob1 = powMod(sob2,d,n)
         console.log("разшифр ",Number(sob1))

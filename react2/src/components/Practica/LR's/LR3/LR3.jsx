@@ -17,7 +17,7 @@ function LR3() {
                         <input type="number" max={18} min={1} id='number' name='countK' />
                         <button onClick={FirstRequestEx1}>Сгенерировать</button>
                     </div>
-                    <textarea placeholder='Shifr text' readOnly id='answerforfirst' rows={1}></textarea>
+                    <textarea placeholder='Encrypt text' readOnly id='answerforfirst' rows={1}></textarea>
                 </div>
             </div>
             <br />
@@ -35,7 +35,7 @@ function LR3() {
                     <div className={s.middle}>
                         <button  onClick={FirstRequestEx2}>Зашифровать</button>
                     </div>
-                    <textarea placeholder='Shifr text' readOnly id='answerforsecond' rows={1}></textarea>
+                    <textarea placeholder='Encrypt text' readOnly id='answerforsecond' rows={1}></textarea>
                 </div>
             </div>
             <div className={s.first}>
@@ -43,7 +43,7 @@ function LR3() {
                     <b>Задание 3</b>
                 </div>
                 <div className={s.pole1}>
-                    <textarea type="text" placeholder='Text for shifr' id='basicValueForThird' rows={1}></textarea>
+                    <textarea type="text" placeholder='Text for encrypt' id='basicValueForThird' rows={1}></textarea>
                     <div className={s.middle}>
                         <select id="selectinChooseForThird">
                             <option value="True">Вариант 6</option>
@@ -51,7 +51,7 @@ function LR3() {
                         </select>
                         <button onClick={FirstRequestEx3}>Зашифровать</button>
                     </div>
-                    <textarea placeholder='Shifr text' readOnly id='AnswerForThird' rows={1}></textarea>
+                    <textarea placeholder='Encrypt text' readOnly id='AnswerForThird' rows={1}></textarea>
                 </div>
             </div>
         </div>

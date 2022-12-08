@@ -1,34 +1,24 @@
-let p2 //вводится
-let g//вводится
-let x //вводится
-let shifr //вводится
-let k //вводится
 
-let za2 = document.getElementById("za2")
-let raz2 = document.getElementById("raz2")
-let err2 = ""
 
-za2.onclick = function() {
-p2 = document.getElementById("p2").value
-g = document.getElementById("g2").value
-x = document.getElementById("x2").value
-k = document.getElementById("k2").value
-shifr = document.getElementById("sob2").value
+export const EX6_2_shif = () => {
+let p2 = document.getElementById("field_ex6_2_p").value
+let g = document.getElementById("field_ex6_2_g").value
+let x = document.getElementById("field_ex6_2_x").value
+let k = document.getElementById("field_ex6_2_k").value
+let shifr = document.getElementById("message_ex6_2").value
 
 
 if(isPrime(p2) && x < p2-1 && 1<x && k < p2-1 && 1 < k && shifr != 0 && !/[A-Za-zа-яА-Я]/.test(shifr)){
-	while(g**(p2-1)%p2!=1){//первообразная, но на эту функицию похуй
+	while(g**(p2-1)%p2!=1){
 		g++
 	}
 	let y = (g**x)%p2
 	let a = (g**k)%p2
 	let b = (y**k)*shifr%p2
-	document.getElementById("zor2").value = `${a}, ${b}`
-	// console.log(a, " ", b)
-	// let razshifr = (b*((a**(p2-1-x))))%p2
-	// console.log(razshifr)
+	document.getElementById("shifr_message_ex6_2").value = `${a}, ${b}`
+
 }else{
-	err2 = ""
+	let err2 = ""
 	if(!isPrime(p2)){
 		err2 += "p не простое число\n"
 	}
@@ -45,18 +35,20 @@ if(isPrime(p2) && x < p2-1 && 1<x && k < p2-1 && 1 < k && shifr != 0 && !/[A-Za-
 	console.log("ТЫ БЕЗДАРЬ")
 }
 }
-raz2.onclick = function(){
-	p2 = document.getElementById("p2").value
-	x = document.getElementById("x2").value
-	shifr = document.getElementById("sob2").value
+
+export const EX6_2_raz = () =>{
+	let p2 = document.getElementById("field_ex6_2_p").value
+	let x = document.getElementById("field_ex6_2_x").value
+	let	shifr = document.getElementById("shifr_message_ex6_2").value
 	if(isPrime(p2) && x < p2-1 && 1<x && shifr != 0 && !/[A-Za-zа-яА-Я]/.test(shifr)){
 		let arr = shifr.split(", ")
-		a = arr[0]
-		b = arr[1]
+		let a = arr[0]
+		let b = arr[1]
 		let razshifr = (b*((a**(p2-1-x))))%p2
-		document.getElementById("zor2").value = razshifr
+		console.log(`b = ${b}, a = ${a}, p2 = ${p2}, x = ${x}, shifr = ${shifr}`)
+		document.getElementById("shifr_message_ex6_2").value = razshifr
 	}else{
-	err2 = ""
+	let err2 = ""
 	if(!isPrime(p2)){
 		err2 += "p не простое число\n"
 	}
@@ -70,11 +62,6 @@ raz2.onclick = function(){
 	console.log("ТЫ БЕЗДАРЬ")
 }
 }
-
-
-
-
-
 
 function isPrime(n) {
 	if (n < 2) {
